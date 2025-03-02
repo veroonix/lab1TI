@@ -8,9 +8,18 @@ namespace lab1_new
 {
     public class Vigener
     {
+        public static void checkLehgth(ref string key, string text)
+        {
+
+            if (key.Length < text.Length)
+            {
+                key.Remove(text.Length - 1);
+            }
+        }
         static string alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
         public static string vigenerCipher(string key, string plainText)
         {
+            checkLehgth (ref key, plainText);
             string cipherText = string.Empty;
             int n = alphabet.Length;
             for (int i = 0; i < plainText.Length; i++)
@@ -26,6 +35,7 @@ namespace lab1_new
         public static string vigenerDecipher(string key, string cipherText)
         {
             string plainText = "";
+            checkLehgth(ref key, cipherText);
             int n = alphabet.Length;
             for (int i = 0; i < cipherText.Length; i++)
             {
