@@ -130,7 +130,6 @@ namespace lab1_new
                 int i3 = 0;
                 int j3 = 0;
                 findInx(key[0], m1, ref i2, ref j3);
-
                 findInx(key[3], m2, ref i3, ref j2);
                 char c1 = key[1][i2, j2];
                 char c2 = key[2][i3, j3];
@@ -151,8 +150,6 @@ namespace lab1_new
                 char m1 = cipherText[pos];
                 char m2 = cipherText[pos + 1];
                 pos += 2;
-
-
                 int i1 = 0;
                 int i4 = 0;
                 int j1 = 0;
@@ -164,7 +161,6 @@ namespace lab1_new
                 plainText += c1;
                 plainText += c2;
             }
-
             return plainText;
         }
     }
